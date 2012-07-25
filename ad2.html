@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	<title>OMG! Responsive ads... On demand!</title>
+	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!">
+	
+	<style>
+		
+		html { font-family: "small"; }
+		body { font-family: Arial, sans-serif; } /* Override <html> inheritance. */
+		
+		body:after {
+			content: "small";
+			display: none;
+		}
+		
+		#desktop { display: none; }
+		
+		@media only screen and (min-width: 900px) {
+			
+			html { font-family: "large"; }
+			body:after { content: "large"; }
+			
+			#skinny { display: none; }
+			#desktop { display: block; }
+			
+		}
+		
+	</style>
+	
+</head>
+<body>
+	
+	<div id="skinny"></div>
+	
+	<div id="desktop"></div>
+	
+	<hr>
+	
+	<p><b>Stuff:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+	
+	<hr>
+	
+	<ol id="debug"></ol>
+	
+	<script src="plugins.js"></script>
+	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
+	
+	<script>
+		<!--
+			
+			function msg(x) {
+				
+				var $ol = document.getElementById('debug'),
+				$li = document.createElement('li');
+				$li.innerHTML = String(x);
+				$ol.appendChild($li);
+				
+				if (typeof console !== 'undefined') console.warn(x);
+				
+			}
+			
+			var $ox = OX(),
+			$ad1 = document.getElementById('skinny'),
+			$ad2 = document.getElementById('desktop'),
+			$units = {
+				page_peel          : '99172',
+				button_2           : '132435',
+				leaderboard        : '245133',
+				medium_rectangle   : '245135',
+				half_page          : '245137',
+				bottom_leaderboard : '11998'
+			},
+			skinny = desktop = false,
+			queries = [
+				{
+					context  : 'small',
+					callback : function() {
+						
+						msg('small');
+						
+						if ( ! skinny) {
+							
+							$ad1.innerHTML = '';
+							writeCapture($ad1).write('<script>$ox.showAdUnit(' + $units.medium_rectangle + ')<\/script>').close(); // Medium Rectangle.
+							
+						}
+						
+						skinny = true;
+						
+					}
+				},
+				{
+					context  : 'large',
+					callback : function() {
+						
+						msg('large');
+						
+						if ( ! desktop) {
+							
+							$ad2.innerHTML = '';
+							writeCapture($ad2).write('<script>$ox.showAdUnit(' + $units.leaderboard + ')<\/script>').close(); // Leaderboard
+							
+						}
+						
+						desktop = true;
+						
+					}
+				}
+			];
+			
+			window.onload = function() {
+				
+				$ox.addPage('12679');
+				
+				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init(queries); }).write('<script src="' + $ox.createAdRequestUrl() + '"><\/script>').close();
+				
+			}
+			
+		//-->
+	</script>
+	
+</body>
+</html>
