@@ -8,15 +8,15 @@ Using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCaptur
 
 Here:
 
-[Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo1.html)
+[Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/demo/demo1.html)
 
 ... here:
 
-[Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo2.html)
+[Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/demo/demo2.html)
 
 ... and finally, here:
 
-[Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo3.html)
+[Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/demo/demo3.html)
 
 **Note:** Each page has a list of browsers that this code has been (quickly) tested in.
 
