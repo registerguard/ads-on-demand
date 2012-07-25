@@ -18,7 +18,7 @@ Here:
 
 [Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo3.html)
 
-**Note: Each page has a list of browsers that this code has been (quickly) tested in.
+**Note:** Each page has a list of browsers that this code has been (quickly) tested in.
 
 ---
 
@@ -52,7 +52,7 @@ If you you're building a responsive website, and you want your ad sizes to chang
 
 This *attempts* to force OpenX ads into loading, on demand, in a responsive layout.
 
-<s>I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.</s>
+~~I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.~~
 
 In two of the demos, I have the ad calls at the foot of the document. IMHO, this is optimal because it allows the page to load before any of the ad scripts even think about executing...
 
