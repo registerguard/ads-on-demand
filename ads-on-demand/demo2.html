@@ -5,31 +5,14 @@
 	
 	<meta charset="utf-8">
 	<title>OMG! Responsive ads... On demand!</title>
-	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's requestAd() based on viewport size!">
+	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!">
 	
-	<style>
-		
-		html { font-family: "small"; }
-		body { font-family: Arial, sans-serif; } /* Override <html> inheritance. */
-		
-		body:after {
-			content: "small";
-			display: none;
-		}
-		
-		#desktop { display: none; }
-		
-		@media only screen and (min-width: 900px) {
-			
-			html { font-family: "large"; }
-			body:after { content: "large"; }
-			
-			#skinny { display: none; }
-			#desktop { display: block; }
-			
-		}
-		
-	</style>
+	<link rel="stylesheet" href="css/demo.css">
+	
+	<!-- https://github.com/scottjehl/Respond/ -->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="js/respond-1.1.0.min.js"></script>
+	<![endif]-->
 	
 </head>
 <body>
@@ -48,24 +31,14 @@
 	
 	<ol id="debug"></ol>
 	
-	<script src="plugins.js"></script>
 	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
-	
+	<script src="js/plugins.js"></script>
+	<script src="js/demo.js"></script>
 	<script>
 		<!--
 			
-			function msg(x) {
-				
-				var $ol = document.getElementById('debug'),
-				$li = document.createElement('li');
-				$li.innerHTML = String(x);
-				$ol.appendChild($li);
-				
-				if (typeof console !== 'undefined') console.warn(x);
-				
-			}
-			
-			var $ad1 = document.getElementById('skinny'),
+			var $ox = OX(),
+			$ad1 = document.getElementById('skinny'),
 			$ad2 = document.getElementById('desktop'),
 			$units = {
 				page_peel          : '99172',
@@ -86,7 +59,7 @@
 						if ( ! skinny) {
 							
 							$ad1.innerHTML = '';
-							writeCapture($ad1).write('<script>OX.requestAd({"auid":"' + $units.medium_rectangle + '"})<\/script>').close(); // Medium Rectangle.
+							writeCapture($ad1).write('<script>$ox.showAdUnit(' + $units.medium_rectangle + ')<\/script>').close(); // Medium Rectangle.
 							
 						}
 						
@@ -103,7 +76,7 @@
 						if ( ! desktop) {
 							
 							$ad2.innerHTML = '';
-							writeCapture($ad2).write('<script>OX.requestAd({"auid":"' + $units.leaderboard + '"})<\/script>').close(); // Leaderboard
+							writeCapture($ad2).write('<script>$ox.showAdUnit(' + $units.leaderboard + ')<\/script>').close(); // Leaderboard
 							
 						}
 						
@@ -113,7 +86,13 @@
 				}
 			];
 			
-			window.onload = function() { MQ.init(queries); }
+			window.onload = function() {
+				
+				$ox.addPage('12679');
+				
+				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init(queries); }).write('<script src="' + $ox.createAdRequestUrl() + '"><\/script>').close(); // Note: Where you see createAdRequestUrl(), that's what $ox.fetchAds() does.
+				
+			}
 			
 		//-->
 	</script>

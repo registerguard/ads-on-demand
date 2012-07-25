@@ -12,7 +12,7 @@ Our initial thought was to use CSS `display:none` to show/hide ad positions… U
 
 > From a functional perspective, your first instinct might be to use a simple display:none; in your stylesheet to hide bigger ads from showing up after a certain breakpoint. However, it’s not that easy.  
 > What happens here is that the ad code is still being loaded, the impressions are counted for the advertiser, but their ad isn’t being shown. Using display:none to hide some ads would result in skewed numbers and would definitely affect the performance of ad campaigns. Display: none; isn’t a solution, it just creates more problems.  
-> -- [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
+> - [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
 
 ### Doh!
  
@@ -26,7 +26,9 @@ If you you're building a responsive website, and you want your ad sizes to chang
 
 ### What's this then?
 
-This code hammers OpenX into play ball with a responsive layout. I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (woot!) and load ads, when they're needed, as the viewport size changes.
+This *attempts* to force OpenX into playing ball with a responsive layout.
+
+I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.
 
 ---
 
@@ -42,7 +44,7 @@ I'm sleepy, so here's a bunch of random notes from the past couple of days:
 1. [OpenX Enterprise docs](http://www.openx.com/docs/openx_help_center/content/gettingstarted.html) are skimpy and there's not many people out there sharing code that relate to this version. In other words, it appears as though OpenX has yet to think about solutions for responsive sites (we are basically at the mercy of the limited options provided to us) and there's a lot of uncharted territory out there in terms of OpenX wheel inventing (and responsive ads in general). 
 1. OpenX has used document.write for a long time now, so I suspect they're not going to change anytime soon (I hope I'm wrong here).
 1. In reality, in most cases, only the geeks change viewport size. 
-1. > "Boston Globe solved this problem on their famously responsive site by creating a designated advertising column. That column is set to a fixed width large enough to contain the ad, and the ad is never resized, even as the rest of the page adjusts responsively. It's not ideal, but it keeps the ad intact."  -- <http://stackoverflow.com/questions/8240829/handling-adsense-banners-in-a-responsive-layout>
+1. <blockquote>Boston Globe solved this problem on their famously responsive site by creating a designated advertising column. That column is set to a fixed width large enough to contain the ad, and the ad is never resized, even as the rest of the page adjusts responsively. It's not ideal, but it keeps the ad intact. - <http://stackoverflow.com/questions/8240829/handling-adsense-banners-in-a-responsive-layout></blockquote>
 1. Looks like there are other companies out there trying to solve this problem: <http://buysellads.com/publishers/pro> and <http://responsiveads.com/>.
 
 ##### Ideas:
@@ -61,4 +63,22 @@ These were the ideas I had before I found a working solution:
 
 ---
 
-**That's all folks!** View the code, and demo page ([here](http://registerguard.github.com/ads-on-demand/ad1.html) and [here](http://registerguard.github.com/ads-on-demand/ad2.html)) for more info.
+##### Demos:
+
+Here:
+
+[Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo1.html)
+
+...and here:
+
+[Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo2.html)
+
+---
+
+##### Warning:
+
+This conglomeration of code is just a proof of concept; I have not tested this code on a production server, so use at your own risk. :)
+
+---
+
+**That's all folks!**
