@@ -12,7 +12,7 @@ Our initial thought was to use CSS `display:none` to show/hide ad positions… U
 
 > From a functional perspective, your first instinct might be to use a simple display:none; in your stylesheet to hide bigger ads from showing up after a certain breakpoint. However, it’s not that easy.  
 > What happens here is that the ad code is still being loaded, the impressions are counted for the advertiser, but their ad isn’t being shown. Using display:none to hide some ads would result in skewed numbers and would definitely affect the performance of ad campaigns. Display: none; isn’t a solution, it just creates more problems.  
-> - [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
+> [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
 
 ### Doh!
  
@@ -44,8 +44,8 @@ I'm sleepy, so here's a bunch of random notes from the past couple of days:
 1. [OpenX Enterprise docs](http://www.openx.com/docs/openx_help_center/content/gettingstarted.html) are skimpy and there's not many people out there sharing code that relate to this version. In other words, it appears as though OpenX has yet to think about solutions for responsive sites (we are basically at the mercy of the limited options provided to us) and there's a lot of uncharted territory out there in terms of OpenX wheel inventing (and responsive ads in general). 
 1. OpenX has used document.write for a long time now, so I suspect they're not going to change anytime soon (I hope I'm wrong here).
 1. In reality, in most cases, only the geeks change viewport size. 
-1. <blockquote>Boston Globe solved this problem on their famously responsive site by creating a designated advertising column. That column is set to a fixed width large enough to contain the ad, and the ad is never resized, even as the rest of the page adjusts responsively. It's not ideal, but it keeps the ad intact. - <http://stackoverflow.com/questions/8240829/handling-adsense-banners-in-a-responsive-layout></blockquote>
-1. Looks like there are other companies out there trying to solve this problem: <http://buysellads.com/publishers/pro> and <http://responsiveads.com/>.
+1. <blockquote>Boston Globe solved this problem on their famously responsive site by creating a designated advertising column. That column is set to a fixed width large enough to contain the ad, and the ad is never resized, even as the rest of the page adjusts responsively. It's not ideal, but it keeps the ad intact.<br><br>[Handling Adsense banners in a responsive layout](http://stackoverflow.com/a/9433920/922323)</blockquote>
+1. Looks like there are other companies out there trying to solve this problem: [BuySellAds](http://buysellads.com/publishers/pro) and [ResponsiveAds](http://responsiveads.com/).
 
 ##### Ideas:
 
