@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
 	<title>OMG! Responsive ads... On demand!</title>
-	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!">
+	<meta name="description" content="Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,6 +19,17 @@
 	<!--[if (lt IE 9) & (!IEMobile)]>
 		<script src="js/respond-1.1.0.min.js"></script>
 	<![endif]-->
+	
+	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
+	<script>
+		<!--
+			
+			var $ox = OX();
+			$ox.addPage('12679');
+			$ox.fetchAds();
+			
+		//-->
+	</script>
 	
 </head>
 <body>
@@ -47,17 +58,17 @@
 				<li>Firefox 3.6.1.8 - <b><span style="color:red">FAIL!</span> Looks like document.writes are nuking the page.</b></li>
 				<li>Firefox 14.0.x</li>
 				<li>Chrome 20.0.x</li>
-				<li>Safari 5.1.x</li>
+				<li>Safari 5.1.x - <b><span style="color:orange">BUGGY!</span> My mouse was doing some weird things and the browser window was slow to scale.</b></li>
 				<li>Opera 12.00</li>
 				<li>IE 9.0.x</li>
-				<li>IE 8.0.x - <b><span style="color:red">FAIL!</span> The initial writeCapture() callback is not fired (but the script is inserted into head).</b></li>
-				<li>IE 7.0.x - <b><span style="color:red">IBID</span></b></li>
+				<li>IE 8.0.x - <b><span style="color:orange">BUGGY!</span> Lots of permission denied JS errors and some ads not loading.</b></li>
+				<li>IE 7.0.x - <b><span style="color:orange">BUGGY!</span> Some ads not loading along with "invalid argument" errors.</b></li>
 			</ul>
 		</li>
 		<li>
 			<b>PC XP:</b>
 			<ul>
-				<li>IE 6.0.x - <b><span style="color:red">IBID</span></b></li>
+				<li>IE 6.0.x - <b><span style="color:orange">BUGGY!</span> Some ads not loading along with "invalid argument" errors.</b></li>
 			</ul>
 		</li>
 		<li>
@@ -84,6 +95,8 @@
 		</li>
 	</ul>
 	
+	<p>Note: Almost all browsers get the occasional failed ad load and/or will load/display two ads.</p>
+	
 	<hr>
 	
 	<p><b>Stuff:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
@@ -94,14 +107,12 @@
 	
 	<ol id="debug"></ol>
 	
-	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/demo.js"></script>
 	<script>
 		<!--
 			
-			var $ox = OX(),
-			$ad1 = document.getElementById('skinny'),
+			var  $ad1 = document.getElementById('skinny'),
 			$ad2 = document.getElementById('desktop'),
 			$units = {
 				page_peel          : '99172',
@@ -150,13 +161,7 @@
 				}
 			];
 			
-			window.onload = function() {
-				
-				$ox.addPage('12679');
-				
-				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init(queries); }).write('<script src="' + $ox.createAdRequestUrl() + '"><\/script>').close(); // Note: Where you see createAdRequestUrl(), that's what $ox.fetchAds() does.
-				
-			}
+			window.onload = function() { MQ.init(queries); }
 			
 		//-->
 	</script>

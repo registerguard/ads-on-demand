@@ -4,8 +4,14 @@
 <head>
 	
 	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
 	<title>OMG! Responsive ads... On demand!</title>
 	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	
 	<link rel="stylesheet" href="css/demo.css">
 	
@@ -20,6 +26,65 @@
 	<div id="skinny"></div>
 	
 	<div id="desktop"></div>
+	
+	<hr>
+	
+	<p>Browser's tested:</p>
+	
+	<ul>
+		<li>
+			<b>MAC Snow Leopard:</b>
+			<ul>
+				<li>Firefox 14.0.x</li>
+				<li>Safari 5.1.x</li>
+				<li>Opera 12.00</li>
+				<li>Chrome 20.0.x</li>
+			</ul>
+		</li>
+		<li>
+			<b>PC Vista:</b>
+			<ul>
+				<li>Firefox 3.6.1.8 - <b><span style="color:red">FAIL!</span> Looks like document.writes are nuking the page.</b></li>
+				<li>Firefox 14.0.x</li>
+				<li>Chrome 20.0.x</li>
+				<li>Safari 5.1.x</li>
+				<li>Opera 12.00</li>
+				<li>IE 9.0.x</li>
+				<li>IE 8.0.x</li>
+				<li>IE 7.0.x - <b><span style="color:orange">BUGGY!</span> Some ads not loading along with "invalid argument" errors.</b></li>
+			</ul>
+		</li>
+		<li>
+			<b>PC XP:</b>
+			<ul>
+				<li>IE 6.0.x - <b><span style="color:red">IBID</span></b></li>
+			</ul>
+		</li>
+		<li>
+			<b>iPhone 4:</b>
+			<ul>
+				<li>Safari 4.3 (simulated)</li>
+				<li>Safari 5.1.1</li>
+				<li>Chrome 19.0.x</li>
+				<li>Opera Mini 7.0.x</li>
+			</ul>
+		</li>
+		<li>
+			<b>iPhone:</b>
+			<ul>
+				<li>Safari 4.3 (simulated)</li>
+			</ul>
+		</li>
+		<li>
+			<b>iPad:</b>
+			<ul>
+				<li>Safari 4.3 (simulated)</li>
+				<li>Safari 5.1.1</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<p>Occasionally I saw "twin" or "ghost" ad loads (i.e. a duplicate ad in the  same position). Also, random ads failed to load.</p>
 	
 	<hr>
 	
@@ -47,7 +112,8 @@
 				half_page          : '245137',
 				bottom_leaderboard : '11998'
 			},
-			skinny = desktop = false,
+			skinny = false,
+			desktop = false,
 			queries = [
 				{
 					context  : 'small',

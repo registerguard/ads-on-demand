@@ -1,6 +1,30 @@
 # Ads on _Demand_!
 
-Using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size! 
+Using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size!
+
+---
+
+##### Demos:
+
+Here:
+
+[Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo1.html)
+
+... here:
+
+[Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo2.html)
+
+... and finally, here:
+
+[Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo3.html)
+
+**Note: Each page has a list of browsers that this code has been (quickly) tested in.
+
+---
+
+##### Warning:
+
+This conglomeration of code is just a proof of concept and has not been tested on a production server... **Use at your own risk!**
 
 ---
 
@@ -26,9 +50,16 @@ If you you're building a responsive website, and you want your ad sizes to chang
 
 ### What's this then?
 
-This *attempts* to force OpenX into playing ball with a responsive layout.
+This *attempts* to force OpenX ads into loading, on demand, in a responsive layout.
 
-I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.
+<s>I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.</s>
+
+In two of the demos, I have the ad calls at the foot of the document. IMHO, this is optimal because it allows the page to load before any of the ad scripts even think about executing...
+
+### "Why cant's":
+
+* Why can't OpenX rewrite their scripts so that they work, *out of the box*, in the foot of the page (thus, allowing page content to load without delay)?
+* Why can't OpenX just offer some sort of more robust and contemporary JS API? Maybe something that dosen't use *oldschool* `document.writes`?
 
 ---
 
@@ -49,9 +80,6 @@ I'm sleepy, so here's a bunch of random notes from the past couple of days:
 
 ##### Ideas:
 
-These were the ideas I had before I found a working solution:
-
-1. IIRC, Using just [onMediaQuery()](https://github.com/JoshBarr/js-media-queries), I was able to load only the ads required for whatever "viewport" size was first loaded. The drawback: Changing ad sizes when viewport changes is not an option. 
 1. iPhone doesn't load Flash, so fallback images are our best bet. Maybe it might be easier to show/hide image positions for every other view than the initially loaded one?
 1. Maybe hide positions that don't fit when viewport changes?
 1. Rethink ad stack: sell more units that will work on all devices?
@@ -60,24 +88,6 @@ These were the ideas I had before I found a working solution:
 1. Most of the above solutions require a shit ton of code. We need a simple and easy to change/manage solution'
 1. Propose a solution to OpenX? Fix their code for them?
 1. Using PHP or Django, grab the `JSON` "mobile" feed, convert it to `JSONP`, cache it, and use the cached version to show/hide ads on pages? 
-
----
-
-##### Demos:
-
-Here:
-
-[Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo1.html)
-
-...and here:
-
-[Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/ads-on-demand/demo2.html)
-
----
-
-##### Warning:
-
-This conglomeration of code is just a proof of concept; I have not tested this code on a production server, so use at your own risk. :)
 
 ---
 
