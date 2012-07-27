@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<title>OpenX "ad unit group" implementation</title>
+	<meta name="description" content="Bug test page... Just using writeCapture().">
+	
+	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
+	<script>
+		<!--
+			
+			var $ox = OX();
+			$ox.addPage('12679');
+			$ox.fetchAds();
+			
+		//-->
+	</script>
+	
+</head>
+<body>
+	
+	<!-- Medium Rectangle: -->
+	<div id="ad"></div>
+	
+	<hr>
+	
+	<h3>Bugs?</h3>
+	
+	<ul>
+		<li>Browser: IE8 (Line 289, Char 6), IE7 (Line 290, Char 6), IE6 (Line 290, Char 6)
+			<ul>
+				<li>Advertisement: Ethan Allen</li>
+				<li>Code: element.write plugin</li>
+				<li>Error: Unexpected call to method or property access</li>
+				<li>Code (starting at line 288 of plugins.js):
+<pre>
+if ( curParentNode && curParentNode.appendChild ) {
+	curParentNode.appendChild( elem );
+	if(module.debug.write) console.log('WRITE start append',elem,'to',curParentNode);
+}</pre>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
+	<script src="js/plugins.js"></script>
+	<script>
+		<!--
+			
+			writeCapture(document.getElementById('ad')).write('<script>$ox.showAdUnit("245135")<\/script>').close(); // Medium Rectangle.
+			
+		//-->
+	</script>
+	
+</body>
+</html>

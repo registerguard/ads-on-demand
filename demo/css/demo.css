@@ -19,3 +19,10 @@ body:after {
 	#desktop { display: block; }
 	
 }
+
+/*--------------------------------------------------------------------*/
+
+.passed, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
+.passed { color: green; }
+.buggy { color: orange; }
+.failed { color: red; }

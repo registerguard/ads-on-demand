@@ -35,51 +35,64 @@
 		<li>
 			<b>MAC Snow Leopard:</b>
 			<ul>
-				<li>Firefox 14.0.x</li>
-				<li>Safari 5.1.x</li>
-				<li>Opera 12.00</li>
-				<li>Chrome 20.0.x</li>
+				<li>Firefox 14.0.x - <span class="passed">Passed!</span></li>
+				<li>Safari 5.1.x - <span class="passed">Passed!</span></li>
+				<li>Opera 12.00 - <span class="passed">Passed!</span></li>
+				<li>Chrome 20.0.x - <span class="passed">Passed!</span></li>
 			</ul>
 		</li>
 		<li>
 			<b>PC Vista:</b>
 			<ul>
-				<li>Firefox 3.6.1.8 - <b><span style="color:red">FAIL!</span> Looks like document.writes are nuking the page.</b></li>
-				<li>Firefox 14.0.x</li>
-				<li>Chrome 20.0.x</li>
-				<li>Safari 5.1.x</li>
-				<li>Opera 12.00</li>
-				<li>IE 9.0.x</li>
-				<li>IE 8.0.x - <b><span style="color:red">FAIL!</span> The initial writeCapture() callback is not fired (but the script is inserted into head).</b></li>
-				<li>IE 7.0.x - <b><span style="color:red">IBID</span></b></li>
+				<li>Firefox 3.6.1.8 - <span class="passed">Passed!</span></li>
+				<li>Firefox 14.0.x - <span class="passed">Passed!</span></li>
+				<li>Chrome 20.0.x - <span class="passed">Passed!</span></li>
+				<li>Safari 5.1.x - <span class="passed">Passed!</span></li>
+				<li>Opera 12.00 - <span class="passed">Passed!</span></li>
+				<li>IE 9.0.x - <span class="passed">Passed!</span></li>
+				<li>
+					IE 8.0.x - <span class="buggy">Buggy!</span>
+					<ul>
+						<li>Ad loads but throws error.</li>
+						<li>Quarantined test page <a href="test1.html">here</a>.</li>
+						<li><b>Question:</b> Could it be the ad that is the problem, and not the <code>writeCapture()</code> code?</li>
+					</ul>
+				</li>
+				<li>
+					IE 7.0.x - <span class="buggy">Buggy!</span> IBID.
+					<ul>
+						<li>Ad partially loads, stops loading at certain point and browser throws error.</li>
+						<li>IBID</li>
+					</ul>
+				</li>
 			</ul>
 		</li>
 		<li>
 			<b>PC XP:</b>
 			<ul>
-				<li>IE 6.0.x - <b><span style="color:red">IBID</span></b></li>
+				<li>IE 6.0.x - <span class="buggy">Buggy!</span> IBID</li>
 			</ul>
 		</li>
 		<li>
 			<b>iPhone 4:</b>
 			<ul>
-				<li>Safari 4.3 (simulated)</li>
-				<li>Safari 5.1.1</li>
-				<li>Chrome 19.0.x</li>
-				<li>Opera Mini 7.0.x</li>
+				<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
+				<li>Safari 5.1.1 - <span class="passed">Passed!</span></li>
+				<li>Chrome 19.0.x - <span class="passed">Passed!</span></li>
+				<li>Opera Mini 7.0.x - <span class="passed">Passed!</span></li>
 			</ul>
 		</li>
 		<li>
 			<b>iPhone:</b>
 			<ul>
-				<li>Safari 4.3 (simulated)</li>
+				<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
 			</ul>
 		</li>
 		<li>
 			<b>iPad:</b>
 			<ul>
-				<li>Safari 4.3 (simulated)</li>
-				<li>Safari 5.1.1</li>
+				<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
+				<li>Safari 5.1.1 - <span class="passed">Passed!</span></li>
 			</ul>
 		</li>
 	</ul>
@@ -119,7 +132,10 @@
 						if ( ! skinny) {
 							
 							$ad1.innerHTML = '';
-							writeCapture($ad1).write('<script>$ox.showAdUnit(' + $units.medium_rectangle + ')<\/script>').close(); // Medium Rectangle.
+							writeCapture($ad1).write('<script>$ox.showAdUnit("' + $units.medium_rectangle + '")<\/script>').close(); // Medium Rectangle.
+							
+							// Note: For additional ads, you'll need to chain writeCapture() calls with the callback.
+							// http://rgne.ws/MpPgCU
 							
 						}
 						
@@ -136,7 +152,9 @@
 						if ( ! desktop) {
 							
 							$ad2.innerHTML = '';
-							writeCapture($ad2).write('<script>$ox.showAdUnit(' + $units.leaderboard + ')<\/script>').close(); // Leaderboard
+							writeCapture($ad2).write('<script>$ox.showAdUnit("' + $units.leaderboard + '")<\/script>').close(); // Leaderboard.
+							
+							// IBID
 							
 						}
 						
