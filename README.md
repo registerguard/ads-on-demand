@@ -52,13 +52,15 @@ If you you're building a responsive website, and you want your ad sizes to chang
 
 ##### What's this then?
 
-This *attempts* to force OpenX ads into loading, on demand, in a responsive layout.
+This project *attempts* to force OpenX ads into loading "on demand", in a responsive layout.
 
 ~~I'm using the scripts (mentioned above) to shove **all** of the ad code in the bottom of the page (faster page loads! Woot!) and load ads, when they're needed, as the viewport size changes.~~
 
-In two of the demos, I have the ad calls at the foot of the document. IMHO, this is optimal because it allows the page to load before any of the ad scripts even think about executing...
+In two of the demos, I have the ad calls at the foot of the document. IMHO, this is optimal because it allows the page to load before the ad scripts even *think* about executing!
 
-##### "Why cant's":
+---
+
+### "Why cant's":
 
 * Why can't OpenX rewrite their scripts so that they work, *out of the box*, in the foot of the page (thus, allowing page content to load without delay)?
 * Why can't OpenX just offer some sort of more robust and contemporary JS API? Maybe something that dosen't use *oldschool* `document.writes`?
