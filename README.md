@@ -1,12 +1,16 @@
 # Ads on _Demand_!
 
-Using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size!
+Experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size!
 
 ---
 
-##### Demos:
+### Demos:
 
 Here:
+
+[OpenX "ad unit group" implementation: Using OpenX's synchronous javascript ad tags, out of the box!](http://registerguard.github.com/ads-on-demand/demo/demo1.html)
+
+... here:
 
 [Using writeCapture() and onMediaQuery() to call OpenX's requestAd({}) based on viewport size!](http://registerguard.github.com/ads-on-demand/demo/demo1.html)
 
@@ -18,15 +22,13 @@ Here:
 
 [Ad calls in head: Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!](http://registerguard.github.com/ads-on-demand/demo/demo3.html)
 
-**Note:** Each page has a list of browsers that this code has been (quickly) tested in.
-
----
-
 ##### Warning:
 
 This conglomeration of code is just a proof of concept and has not been tested on a production server... **Use at your own risk!**
 
 ---
+
+### About:
 
 At [The Register-Guard](http://www.registerguard.com), we're currently in the process of building a "[responsive](http://en.wikipedia.org/wiki/Responsive_Web_Design)" template for an upcoming redesign of our [site](http://www.registerguard.com).
 
@@ -38,17 +40,17 @@ Our initial thought was to use CSS `display:none` to show/hide ad positions… U
 > What happens here is that the ad code is still being loaded, the impressions are counted for the advertiser, but their ad isn’t being shown. Using display:none to hide some ads would result in skewed numbers and would definitely affect the performance of ad campaigns. Display: none; isn’t a solution, it just creates more problems.  
 > [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
 
-### Doh!
+##### Doh!
  
 We use [OpenX](http://www.openx.com) "[Enterprise](http://openx.com/support/log-in)" to serve ads; after a few quick experiments, we quickly came to realize that OpenX isn't setup to serve ads, on the fly, based on viewport size.
 
-### Huh?
+##### Huh?
 
 It all boils down to Javascript's `document.write` command; unfortunately, if you call a script that uses this command (after the page has loaded) it will wipe out your page and only display the output of the command.
 
 If you you're building a responsive website, and you want your ad sizes to change based on viewport size, then trying to call ad tags that use the `document.write` command can be a **big PITA**.
 
-### What's this then?
+##### What's this then?
 
 This *attempts* to force OpenX ads into loading, on demand, in a responsive layout.
 
@@ -56,10 +58,11 @@ This *attempts* to force OpenX ads into loading, on demand, in a responsive layo
 
 In two of the demos, I have the ad calls at the foot of the document. IMHO, this is optimal because it allows the page to load before any of the ad scripts even think about executing...
 
-### "Why cant's":
+##### "Why cant's":
 
 * Why can't OpenX rewrite their scripts so that they work, *out of the box*, in the foot of the page (thus, allowing page content to load without delay)?
 * Why can't OpenX just offer some sort of more robust and contemporary JS API? Maybe something that dosen't use *oldschool* `document.writes`?
+* Why can't we have the ability to put OpenX's ad calls inside javascript variables so they can be used when needed, on **and** after (the) page loads?
 
 ---
 
@@ -87,7 +90,13 @@ I'm sleepy, so here's a bunch of random notes from the past couple of days:
 1. Override `document.write`? Unfortunately, there's a lot of these calls in different scripts. Overriding that built-in JS method is a hack. 
 1. Most of the above solutions require a shit ton of code. We need a simple and easy to change/manage solution'
 1. Propose a solution to OpenX? Fix their code for them?
-1. Using PHP or Django, grab the `JSON` "mobile" feed, convert it to `JSONP`, cache it, and use the cached version to show/hide ads on pages? 
+1. Using PHP or Django, grab the `JSON` "mobile" feed, convert it to `JSONP`, cache it, and use the cached version to show/hide ads on pages?
+
+---
+
+### Discussion(s):
+
+* writeCapture.js Users: [Using WriteCapture2 to manage loading of ads on a responsive website...](http://rgne.ws/O3kJuU)
 
 ---
 
