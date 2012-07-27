@@ -28,7 +28,7 @@ This conglomeration of code is just a proof of concept and has not been tested o
 
 ---
 
-### About:
+### The scoop:
 
 At [The Register-Guard](http://www.registerguard.com), we're currently in the process of building a "[responsive](http://en.wikipedia.org/wiki/Responsive_Web_Design)" template for an upcoming redesign of our [site](http://www.registerguard.com).
 
