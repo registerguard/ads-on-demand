@@ -8,7 +8,7 @@ Experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree
 
 Here:
 
-[OpenX "ad unit group" implementation: Using OpenX's synchronous javascript ad tags, out of the box!](http://registerguard.github.com/ads-on-demand/demo/demo1.html)
+[OpenX "ad unit group" implementation: Using OpenX's synchronous javascript ad tags, out of the box!](http://registerguard.github.com/ads-on-demand/demo/default.html)
 
 ... here:
 
