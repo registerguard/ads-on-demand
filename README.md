@@ -4,6 +4,10 @@ Experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree
 
 ---
 
+**Note:** *Head on over to the [`develop` brach](https://github.com/registerguard/ads-on-demand/tree/develop) to view the latest changes to the code (you can [compare branches here](https://github.com/registerguard/ads-on-demand/branches)).*
+
+---
+
 ### Demos:
 
 Here:
