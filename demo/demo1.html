@@ -17,7 +17,7 @@
 	
 	<!-- https://github.com/scottjehl/Respond/ -->
 	<!--[if (lt IE 9) & (!IEMobile)]>
-		<script src="js/respond-1.1.0.min.js"></script>
+		<script src="js/respond.min.js"></script>
 	<![endif]-->
 	
 </head>
@@ -50,27 +50,14 @@
 				<li>Safari 5.1.x - <span class="passed">Passed!</span></li>
 				<li>Opera 12.00 - <span class="passed">Passed!</span></li>
 				<li>IE 9.0.x - <span class="passed">Passed!</span></li>
-				<li>
-					IE 8.0.x - <span class="buggy">Buggy!</span>
-					<ul>
-						<li>Flash version of ad loads but throws error.</li>
-						<li>Quarantined test page <a href="test1.html">here</a>.</li>
-						<li><b>Question:</b> Could it be the ad that is the problem, and not the <code>writeCapture()</code> code?</li>
-					</ul>
-				</li>
-				<li>
-					IE 7.0.x - <span class="buggy">Buggy!</span> IBID.
-					<ul>
-						<li>Ad placeholder image loads and browser throws error.</li>
-						<li>IBID</li>
-					</ul>
-				</li>
+				<li>IE 8.0.x - <span class="passed">Passed!</span></li>
+				<li>IE 7.0.x - <span class="passed">Passed!</span></li>
 			</ul>
 		</li>
 		<li>
 			<b>PC XP:</b>
 			<ul>
-				<li>IE 6.0.x - <span class="buggy">Buggy!</span> IBID</li>
+				<li>IE 6.0.x - <span class="tbd">TBD</span> The damned <a href="http://www.microsoft.com/en-us/download/details.aspx?id=11575">MS VPC tester EXE</a> won't extract on a 32bit system!</li>
 			</ul>
 		</li>
 		<li>
@@ -108,7 +95,9 @@
 	<ol id="debug"></ol>
 	
 	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
-	<script src="js/plugins.js"></script>
+	<script src="js/element.write.js"></script>
+	<script src="js/writeCapture2.js"></script>
+	<script src="js/onmediaquery-0.1.1.js"></script>
 	<script src="js/demo.js"></script>
 	<script>
 		<!--

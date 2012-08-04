@@ -8,6 +8,18 @@
 ---
 
 ## v0.1.1
+#### Mmmmm [D]D, YYYY
+
+* Updated WriteCapture2 to the latest version.
+* Re-arranged file structure a bit.
+* Created a few new test pages.
+* Re-tested IEs.
+    * IE 8 passes!
+    * IE 7 no longer throws an error.
+    * IE 6: TBD.
+* Put JS plugins in their own files for easier debugging and updating.
+* Updated README.md.
+
 #### July 27, 2012
 
 * Added `default.html` as an example of what an out of the box OpenX implementation looks like (for comparison's sake).

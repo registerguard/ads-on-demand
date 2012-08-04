@@ -22,7 +22,9 @@ body:after {
 
 /*--------------------------------------------------------------------*/
 
-.passed, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
+.tbd, .passed, .acceptable, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
 .passed { color: green; }
+.acceptable { color: blue; }
 .buggy { color: orange; }
 .failed { color: red; }
+.tbd { color: purple; }

@@ -24,7 +24,7 @@ Here:
 
 ##### Warning:
 
-This conglomeration of code is just a proof of concept and has not been tested on a production server... **Use at your own risk!**
+This conglomeration of code has yet to be tested on a live production server... **Use at your own risk!**
 
 ---
 
@@ -99,6 +99,46 @@ I'm sleepy, so here's a bunch of random notes from the past couple of days:
 ### Discussion(s):
 
 * writeCapture.js Users: [Using WriteCapture2 to manage loading of ads on a responsive website...](http://rgne.ws/O3kJuU)
+* [element.write](https://github.com/iamnoah/element.write), issue #2: [Unexpected call to method or property access](https://github.com/iamnoah/element.write/issues/2)
+
+---
+
+### Browsers tested with (Mac/PC):
+
+Here's the basic test suite:
+
+* Desktop:
+    * Firefox
+    * Safari
+    * Opera
+    * Chrome
+    * IE 6-9
+* iPhone:
+    * Safari
+    * Chrome
+    * Opera Mini
+* iPad:
+    * Safari
+
+Check out the [demo pages](https://github.com/registerguard/ads-on-demand#demos) for more details.
+
+---
+
+### Debug tools:
+
+* [Virtual PC](http://www.microsoft.com/windows/virtual-pc/download.aspx)  
+**Note:** I'd suggest clicking the "Don't need XP Mode and want VPC only? Download Windows Virtual PC without Windows XP Mode." link... XP Mode sounds like a headache.
+    * [IE tester images](http://www.microsoft.com/en-us/download/details.aspx?id=11575).
+* [Adobe Flash DEBUG Player](http://www.adobe.com/support/flashplayer/downloads.html)
+    * **Note:** Don't make the same mistake I did... Install Flash player on the VPC IE apps!
+* Mac:
+    * [Firebug](https://getfirebug.com/)
+* PC:
+    * [DebugBar](http://www.debugbar.com/) (free)
+    * [Internet Explorer Developer Toolbar](http://www.microsoft.com/en-us/download/details.aspx?id=18359)
+        * [Companion.JS](http://www.my-debugbar.com/wiki/CompanionJS/HomePage) (awesome JS debugger for IE!)
+    * [Firebug Lite](https://getfirebug.com/firebuglite/)
+    * Don't forget to turn on [script debugging](http://blogs.msdn.com/b/ie/archive/2004/10/26/247912.aspx) via the VPC IE apps!
 
 ---
 
