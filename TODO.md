@@ -1,6 +1,11 @@
 # TODO
 
-## Future
+#### v0.1.1
+
+* Test new writeCapture2 API.
+* Real world test page with multiple ads and breakpoints.
+
+#### v0.1.0
 
 * ~~Determine if there's anything that can be done about the Ethan Allen ad not loading Flash in IE7.~~
     * ~~No errors are thrown... Is it the ad? Maybe I need to update Flahs player?~~

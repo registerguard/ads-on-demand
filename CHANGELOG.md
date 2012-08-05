@@ -8,7 +8,7 @@
 ---
 
 ## v0.1.1
-#### Mmmmm [D]D, YYYY
+#### August 5, 2012
 
 * Updated WriteCapture2 to the latest version.
 * Re-arranged file structure a bit.
