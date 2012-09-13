@@ -1,6 +1,6 @@
-# Ads on _Demand_!
+# Responsive ads, on _demand_!
 
-### Responsive ad serving: Experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size! ([read more](https://github.com/registerguard/ads-on-demand/wiki))
+### Responsive ad serving experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size! ([read more](https://github.com/registerguard/ads-on-demand/wiki))
 
 ---
 
