@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ A ]LPHA
+**
+**--------------------------------------------------------------------------
+*/
+
+/**
+ * For Javascript onMediaQuery.
+ *
+ * @see rgne.ws/Oi6sdd
+ */
+
+html { font-family: "alpha"; }
+body { font-family: Arial, sans-serif; } /* Override `<html>` inheritance. */
+body:after { content: "alpha"; display: none; }
+
+/**
+ * Break points and container sizes based on Wiffle grid.
+ *
+ * @see rgne.ws/PjZjKh
+ */
+
+#container { margin: 0 10px; }
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ B ]RAVO
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 665px) {
+	
+	html { font-family: "bravo"; }
+	body:after { content: "bravo"; }
+	
+	#container { width: 640px; margin: 0 auto; }
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ C ]HARLIE
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1005px) {
+	
+	html { font-family: "charlie"; }
+	body:after { content: "charlie"; }
+	
+	#container { width: 980px; }
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ D ]ELTA
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1345px) {
+	
+	html { font-family: "delta"; }
+	body:after { content: "delta"; }
+	
+	#container { width: 1320px; }
+	
+}
+
+/*
+**----------------------------------
+** Demo-specific styles:
+**----------------------------------
+*/
+
+.tbd, .passed, .acceptable, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
+.passed { color: green; }
+.acceptable { color: blue; }
+.buggy { color: orange; }
+.failed { color: red; }
+.tbd { color: purple; }
