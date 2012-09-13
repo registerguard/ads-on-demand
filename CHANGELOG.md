@@ -7,6 +7,21 @@
 
 ---
 
+## v1.0.0
+#### September 12, 2012
+
+* Moved previous demos to `basic` folder.
+* Created `advanced` folder:
+    * Created advanced demo using more ad tags (i.e. a real-world example).
+* Updated CHANGELOG (this file).
+* Updated README:
+    * Moved info to project's WIKI.
+* Bumped version number.
+* Added `AUTHORS.md`.
+    * Added @psullivan6 to `CONTRIBUTORS.md`.
+
+---
+
 ## v0.1.1
 #### August 5, 2012
 

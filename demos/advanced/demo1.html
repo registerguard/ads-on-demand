@@ -25,13 +25,57 @@
 	
 	<div id="container">
 		
-		<div id="alpha"></div>
+		<h1>OMG! Responsive ads... On demand!</h1>
 		
-		<div id="bravo"></div>
+		<p>Complex example using <code><a href="https://github.com/iamnoah/writeCapture/tree/writeCapture2">writeCapture()</a></code> and <code><a href="https://github.com/registerguard/js-media-queries">onMediaQuery()</a></code> to call OpenX's <code><a href="http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit">showAdUnit()</a></code> based on viewport size!</p>
 		
-		<div id="charlie"></div>
+		<hr>
 		
-		<div id="delta"></div>
+		<section>
+			
+			<h1>Mobile</h1>
+			
+			<div class="alpha advert" id="mobile_billboard"></div>
+			
+			<div class="alpha advert" id="mobile_leaderboard"></div>
+			
+			<div class="alpha advert" id="mobile_medium_rectangle_1"></div>
+			
+			<div class="alpha advert" id="mobile_medium_rectangle_2"></div>
+			
+		</section>
+		
+		<hr>
+		
+		<section>
+			
+			<h1>Tablet</h1>
+			
+			<div class="bravo advert" id="tablet_billboard"></div>
+			
+			<div class="bravo advert" id="tablet_leaderboard"></div>
+			
+			<div class="bravo advert" id="tablet_medium_rectangle_1"></div>
+			
+			<div class="bravo advert" id="tablet_medium_rectangle_2"></div>
+			
+		</section>
+		
+		<hr>
+		
+		<section>
+			
+			<h1>Desktop &amp; Big Desktop</h1>
+			
+			<div class="charlie delta advert" id="desktop_billboard"></div>
+			
+			<div class="charlie delta advert" id="desktop_leaderboard"></div>
+			
+			<div class="charlie delta advert" id="desktop_medium_rectangle_1"></div>
+			
+			<div class="charlie delta advert" id="desktop_medium_rectangle_2"></div>
+			
+		</section>
 		
 		<hr>
 		
@@ -92,13 +136,13 @@
 		</ul>
 		
 		<hr>
+		-->
 		
 		<p><b>Stuff:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
 		
 		<hr>
-		-->
 		
 		<ol id="debug"></ol>
 		
@@ -112,12 +156,45 @@
 	<script>
 		<!--
 			
-			var,
+			var $ox = OX(),
 			alpha,
 			bravo,
 			charlie,
 			delta,
-			queries = [
+			$mobile_billboard           = document.getElementById('mobile_billboard'),
+			$mobile_leaderboard         = document.getElementById('mobile_leaderboard'),
+			$mobile_medium_rectangle_1  = document.getElementById('mobile_medium_rectangle_1'),
+			$mobile_medium_rectangle_2  = document.getElementById('mobile_medium_rectangle_2'),
+			$tablet_billboard           = document.getElementById('tablet_billboard'),
+			$tablet_leaderboard         = document.getElementById('tablet_leaderboard'),
+			$tablet_medium_rectangle_1  = document.getElementById('tablet_medium_rectangle_1'),
+			$tablet_medium_rectangle_2  = document.getElementById('tablet_medium_rectangle_2'),
+			$desktop_billboard          = document.getElementById('desktop_billboard'),
+			$desktop_leaderboard        = document.getElementById('desktop_leaderboard'),
+			$desktop_medium_rectangle_1 = document.getElementById('desktop_medium_rectangle_1'),
+			$desktop_medium_rectangle_2 = document.getElementById('desktop_medium_rectangle_2'),
+			$units = {
+				$mobile : {
+					billboard          : 273975,
+					leaderboard        : 280964,
+					medium_rectangle_1 : 280966,
+					medium_rectangle_2 : 280968
+				},
+				$tablet : {
+					billboard          : 273976,
+					leaderboard        : 273977,
+					medium_rectangle_1 : 280965,
+					medium_rectangle_2 : 280967
+				},
+				$desktop : {
+					billboard          : 273993,
+					leaderboard        : 273978,
+					medium_rectangle_1 : 273979,
+					medium_rectangle_2 : 273980
+				}
+			},
+			$queries = [
+				
 				{
 					context  : 'alpha',
 					callback : function() {
@@ -126,12 +203,19 @@
 						
 						if ( ! alpha) {
 							
+							writeCapture.write($mobile_billboard,          '<script>$ox.showAdUnit("' + $units.$mobile.billboard + '")<\/script>');
+							writeCapture.write($mobile_leaderboard,        '<script>$ox.showAdUnit("' + $units.$mobile.leaderboard + '")<\/script>');
+							writeCapture.write($mobile_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$mobile.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($mobile_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$mobile.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>mobile</i> document.writes are done!'); });
+							
 						}
 						
 						alpha = true;
 						
 					}
 				},
+				
 				{
 					context  : 'bravo',
 					callback : function() {
@@ -140,103 +224,52 @@
 						
 						if ( ! bravo) {
 							
+							writeCapture.write($tablet_billboard,          '<script>$ox.showAdUnit("' + $units.$tablet.billboard + '")<\/script>');
+							writeCapture.write($tablet_leaderboard,        '<script>$ox.showAdUnit("' + $units.$tablet.leaderboard + '")<\/script>');
+							writeCapture.write($tablet_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$tablet.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($tablet_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$tablet.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>tablet</i> document.writes are done!'); });
+							
 						}
 						
 						bravo = true;
 						
 					}
 				},
+				
 				{
-					context  : 'charlie',
+					context  : ['charlie', 'delta'],
 					callback : function() {
 						
-						msg('charlie');
+						msg('charlie/delta');
 						
-						if ( ! charlie) {
+						if (( ! charlie) || ( ! delta)) {
+							
+							writeCapture.write($desktop_billboard,          '<script>$ox.showAdUnit("' + $units.$desktop.billboard + '")<\/script>');
+							writeCapture.write($desktop_leaderboard,        '<script>$ox.showAdUnit("' + $units.$desktop.leaderboard + '")<\/script>');
+							writeCapture.write($desktop_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$desktop.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($desktop_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$desktop.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>desktop</i> document.writes are done!'); });
 							
 						}
 						
-						charlie = true;
-						
-					}
-				},
-				{
-					context  : 'delta',
-					callback : function() {
-						
-						msg('delta');
-						
-						if ( ! delta) {
-							
-						}
-						
-						delta = true;
+						charlie = delta = true;
 						
 					}
 				}
-			];
-			
-			/*
-			var $ox = OX(),
-			$ad1 = document.getElementById('skinny'),
-			$ad2 = document.getElementById('desktop'),
-			$units = {
-				leaderboard      : '245133',
-				medium_rectangle : '245135'
-			},
-			skinny = false,
-			desktop = false,
-			queries = [
-				{
-					context  : 'small',
-					callback : function() {
-						
-						msg('small');
-						
-						if ( ! skinny) {
-							
-							$ad1.innerHTML = '';
-							writeCapture($ad1).write('<script>$ox.showAdUnit("' + $units.medium_rectangle + '")<\/script>').close(); // Medium Rectangle.
-							
-							// Note: For additional ads, you'll need to chain writeCapture() calls with the callback.
-							// http://rgne.ws/MpPgCU
-							
-						}
-						
-						skinny = true;
-						
-					}
-				},
-				{
-					context  : 'large',
-					callback : function() {
-						
-						msg('large');
-						
-						if ( ! desktop) {
-							
-							$ad2.innerHTML = '';
-							writeCapture($ad2).write('<script>$ox.showAdUnit("' + $units.leaderboard + '")<\/script>').close(); // Leaderboard.
-							
-							// IBID
-							
-						}
-						
-						desktop = true;
-						
-					}
-				}
+				
 			];
 			
 			window.onload = function() {
 				
-				$ox.addPage('13289');
-				$ox.addVariable('section', 'sports');
+				$ox.addVariable('section', 'Sports');
+				$ox.addPage('13289'); // desktop
+				$ox.addPage('13291'); // tablet
+				$ox.addPage('13292'); // mobile
 				
-				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init(queries); }).write('<script src="' + $ox.createAdRequestUrl() + '"><\/script>').close(); // Note: Where you see createAdRequestUrl(), that's what $ox.fetchAds() does.
+				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init($queries); }).write('<script>$ox.fetchAds()<\/script>').close();
 				
-			}
-			*/
+			};
 			
 		//-->
 	</script>

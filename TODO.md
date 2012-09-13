@@ -1,9 +1,13 @@
 # TODO
 
+#### v1.0.0
+
+* Cross browser test latest demo(s).
+
 #### v0.1.1
 
-* Test new writeCapture2 API.
-* Real world test page with multiple ads and breakpoints.
+* ~~Test new writeCapture2 API.~~
+* ~~Real world test page with multiple ads and breakpoints.~~
 
 #### v0.1.0
 

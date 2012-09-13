@@ -26,6 +26,13 @@ body:after { content: "alpha"; display: none; }
 
 #container { margin: 0 10px; }
 
+/**
+ * Hide from both screen readers and browsers.
+ */
+
+.bravo, .charlie, .delta { display: none !important; visibility: hidden; }
+.alpha { display: block !important; visibility: visible; }
+
 /*
 **--------------------------------------------------------------------------
 **
@@ -36,10 +43,25 @@ body:after { content: "alpha"; display: none; }
 
 @media only screen and (min-width: 665px) {
 	
+	/**
+	 * For Javascript onMediaQuery.
+	 */
+	
 	html { font-family: "bravo"; }
 	body:after { content: "bravo"; }
 	
+	/**
+	 * Break points and container sizes based on Wiffle grid.
+	 */
+	
 	#container { width: 640px; margin: 0 auto; }
+	
+	/**
+	 * Hide from both screen readers and browsers.
+	 */
+	
+	.alpha { display: none !important; visibility: hidden; }
+	.bravo { display: block !important; visibility: visible; }
 	
 }
 
@@ -53,10 +75,25 @@ body:after { content: "alpha"; display: none; }
 
 @media only screen and (min-width: 1005px) {
 	
+	/**
+	 * For Javascript onMediaQuery.
+	 */
+	
 	html { font-family: "charlie"; }
 	body:after { content: "charlie"; }
 	
+	/**
+	 * Break points and container sizes based on Wiffle grid.
+	 */
+	
 	#container { width: 980px; }
+	
+	/**
+	 * Hide from both screen readers and browsers.
+	 */
+	
+	.bravo { display: none !important; visibility: hidden; }
+	.charlie { display: block !important; visibility: visible; }
 	
 }
 
@@ -70,18 +107,33 @@ body:after { content: "alpha"; display: none; }
 
 @media only screen and (min-width: 1345px) {
 	
+	/**
+	 * For Javascript onMediaQuery.
+	 */
+	
 	html { font-family: "delta"; }
 	body:after { content: "delta"; }
 	
+	/**
+	 * Break points and container sizes based on Wiffle grid.
+	 */
+	
 	#container { width: 1320px; }
+	
+	/**
+	 * Hide from both screen readers and browsers.
+	 */
+	
+	.charlie { display: none !important; visibility: hidden; }
+	.delta { display: block !important; visibility: visible; }
 	
 }
 
-/*
-**----------------------------------
-** Demo-specific styles:
-**----------------------------------
-*/
+/*----------------------------------( DEMO ONLY )----------------------------------*/
+
+/**
+ * Browser tests.
+ */
 
 .tbd, .passed, .acceptable, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
 .passed { color: green; }
@@ -89,3 +141,21 @@ body:after { content: "alpha"; display: none; }
 .buggy { color: orange; }
 .failed { color: red; }
 .tbd { color: purple; }
+
+/**
+ * Advertisements.
+ */
+
+.advert {
+	text-align: center;
+	margin: 10px 0;
+	position: relative;
+}
+	.advert * { margin: 0 auto; }
+	.advert object { display: block; }
+
+/**
+ * Hide "ad choices" rogue html element.
+ */
+
+#BAP-holder { display: none; visibility: hidden; }
