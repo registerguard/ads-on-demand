@@ -8,4 +8,10 @@
 
 ---
 
+Scan with phone and/or click to view the latest demo:
+
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/demos/advanced/demo1.html)
+
+---
+
 *Developed by [Micky Hulse](http://hulse.me)/[The Register-Guard](http://www.registerguard.com).*
