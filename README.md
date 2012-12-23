@@ -124,6 +124,8 @@ Here's the basic test suite:
 
 Check out the [demo pages](https://github.com/registerguard/ads-on-demand#demos) for more details.
 
+---
+
 #### DEBUG TOOLS
 
 * [Virtual PC](http://www.microsoft.com/windows/virtual-pc/download.aspx)  
@@ -144,6 +146,8 @@ Check out the [demo pages](https://github.com/registerguard/ads-on-demand#demos)
     * [Firebug Lite](https://getfirebug.com/firebuglite/): Like Firebug for Firefox, but lighter. :)
     * Don't forget to turn on [script debugging](http://blogs.msdn.com/b/ie/archive/2004/10/26/247912.aspx) via the VPC IE apps!
 
+---
+
 #### LINKS & RESOURCES
 
 * [OpenX Enterprise documentation](http://www.openx.com/docs/openx_help_center/)
@@ -156,6 +160,8 @@ Check out the [demo pages](https://github.com/registerguard/ads-on-demand#demos)
 * [`WriteCapture2`](https://github.com/iamnoah/writeCapture/tree/writeCapture2)
 * [`element.write`](https://github.com/iamnoah/element.write)
 * [`onMediaQuery`](https://github.com/JoshBarr/js-media-queries), and here's [my fork](https://github.com/registerguard/js-media-queries)
+
+---
 
 #### CODE EXAMPLE
 
