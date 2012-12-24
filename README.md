@@ -46,9 +46,9 @@ In situations where we can't use `<iframe>`s, we put our CSS's show/hide within 
 
 #### A SUPER SIMPLE DEMONSTRATION
 
-Scan with phone and/or click to view the [latest demo](http://registerguard.github.com/ads-on-demand/demo/):
+Scan with phone and/or click to view the [latest demo](http://registerguard.github.com/ads-on-demand/master/):
 
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/demo/)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/master/)
 
 Browse through the source code via the [`gh-pages` branch](https://github.com/registerguard/ads-on-demand/tree/gh-pages/master/).
 
