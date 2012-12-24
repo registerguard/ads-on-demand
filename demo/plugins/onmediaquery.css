@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ A ]LPHA
+**
+**--------------------------------------------------------------------------
+*/
+
+/**
+ * For Android/other browsers:
+ */
+
+html { font-family: "alpha"; }
+
+/**
+ * Make Opera/other happy:
+ */
+
+body:after { content: "alpha"; display: none; }
+
+/**
+ * Override `<html>` inheritance:
+ */
+
+body { font-family: Arial, sans-serif; } /* Cambria, Georgia, serif */
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ B ]RAVO
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 665px) {
+	
+	/**
+	 * For Android/other browsers:
+	 */
+	
+	html { font-family: "bravo"; }
+	
+	/**
+	 * Make Opera/other happy:
+	 */
+	
+	body:after { content: "bravo"; }
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ C ]HARLIE
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1005px) {
+	
+	/**
+	 * For Android/other browsers:
+	 */
+	
+	html { font-family: "charlie"; }
+	
+	/**
+	 * Make Opera/other happy:
+	 */
+	
+	body:after { content: "charlie"; }
+	
+}
+
+/*
+**--------------------------------------------------------------------------
+**
+** [ D ]ELTA
+**
+**--------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 1345px) {
+	
+	/**
+	 * For Android/other browsers:
+	 */
+	
+	html { font-family: "delta"; }
+	
+	/**
+	 * Make Opera/other happy:
+	 */
+	
+	body:after { content: "delta"; }
+
+}
