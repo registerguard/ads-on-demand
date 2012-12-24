@@ -1,30 +1,30 @@
+#### ATTENTION: There's [new code here](https://github.com/registerguard/ads-on-demand).
+
+---
+
 # Responsive ads, on _demand_!
 
 ### Responsive ad serving experiments using [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) to call [OpenX](http://www.openx.com) ads based on viewport size!
 
 ---
 
-**Note:** *Check the [`develop` brach](https://github.com/registerguard/ads-on-demand/tree/develop) for the latest changes to the code ([compare branches here](https://github.com/registerguard/ads-on-demand/branches)).*
-
----
-
 #### DEMOS
 
-Scan with phone and/or click to view the [latest demo](http://registerguard.github.com/ads-on-demand/demos/advanced/demo1.html):
+Scan with phone and/or click to view the [latest demo](http://registerguard.github.com/ads-on-demand/defunct/advanced/demo1.html):
 
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/demos/advanced/demo1.html)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/defunct/advanced/demo1.html)
 
 ## Advanced demos
 
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/advanced/default.html)** - [OpenX](http://www.openx.com/publisher/enterprise-ad-server) [ad unit group](http://www.openx.com/docs/openx_help_center/content/managingpages.html) implementation: Using [OpenX](http://www.openx.com/docs/openx_help_center/)'s [synchronous javascript](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs.html) ad tags, out of the box!
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/advanced/demo1.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/advanced/default.html)** - [OpenX](http://www.openx.com/publisher/enterprise-ad-server) [ad unit group](http://www.openx.com/docs/openx_help_center/content/managingpages.html) implementation: Using [OpenX](http://www.openx.com/docs/openx_help_center/)'s [synchronous javascript](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs.html) ad tags, out of the box!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/advanced/demo1.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
 
 ## Basic demos
 
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/basic/default.html)** - [OpenX](http://www.openx.com/publisher/enterprise-ad-server) "ad unit group" implementation: Using [OpenX](http://www.openx.com/docs/openx_help_center/)'s [synchronous javascript](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs.html) ad tags, out of the box!
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/basic/demo1.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`requestAd({})`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_staticmethods.html#adtagguide_tagapi_static_requestad) based on viewport size!
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/basic/demo2.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
-1. **[DEMO](http://registerguard.github.com/ads-on-demand/demos/basic/demo3.html)** - Ad calls in head: Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/default.html)** - [OpenX](http://www.openx.com/publisher/enterprise-ad-server) "ad unit group" implementation: Using [OpenX](http://www.openx.com/docs/openx_help_center/)'s [synchronous javascript](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs.html) ad tags, out of the box!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/demo1.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`requestAd({})`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_staticmethods.html#adtagguide_tagapi_static_requestad) based on viewport size!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/demo2.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
+1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/demo3.html)** - Ad calls in head: Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
 
 ---
 
