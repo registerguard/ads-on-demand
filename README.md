@@ -1,25 +1,28 @@
 # Responsive ads, on _demand_!
 
-### Responsive serving of [OpenX](http://www.openx.com) ads based on viewport size!
+### Responsive serving of ads based on viewport size!
 
 ---
 
-#### STATE OF THE REPO
+#### SIMPLE DEMO
 
-We've had a bumpy road to get where we're at today (to say the least).
+Scan with phone and/or click to view the [latest demo](http://registerguard.github.com/ads-on-demand/demo/):
 
-My (Micky's) initial testing can be found in this "[**failed**](https://github.com/registerguard/ads-on-demand/tree/failed)" branch, which "faild" for two primary reasons:
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/demo/)
 
-1. [Horrible ad javascript and markup](https://groups.google.com/d/topic/writecapturejs-users/636Ez8YniPQ/discussion) coming from 3rd parties.
-2. OpenX's code base is a moving target (from what we experienced, OpenX changes their code base every month or two).
+**Note:** Our demo serves ads using [OpenX Enterprise-level ad serving solutions for publishers](http://www.openx.com/publisher/enterprise-ad-server); this repo's concepts and techniques should be easy to adapt to other ad serving software.
 
-...
+---
 
-More details coming soon.
+#### v1.x.x BRANCH
 
-…
+Many hours of work can be found via the [**defunct**](https://github.com/registerguard/ads-on-demand/tree/defunct) branch, which we abandoned for two primary reasons:
 
-We've found a working solution! Code to be posted in the next few days.
+##### 1. Seriously crappy, third party, HTML and/or javascript!
+
+The crap HTML and/or javascript was a huge problem for when it came to using [writeCapture](https://github.com/iamnoah/writeCapture) or [PostScribe](https://github.com/krux/postscribe/) plugins (example here).
+
+##### 2. The moving target that is OpenX's code base!
 
 ---
 
