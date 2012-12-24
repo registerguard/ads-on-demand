@@ -26,6 +26,8 @@ Scan with phone and/or click to view the [latest demo](http://registerguard.gith
 1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/demo2.html)** - Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
 1. **[DEMO](http://registerguard.github.com/ads-on-demand/defunct/basic/demo3.html)** - Ad calls in head: Using [`writeCapture()`](https://github.com/iamnoah/writeCapture/tree/writeCapture2) and [`onMediaQuery()`](https://github.com/registerguard/js-media-queries) to call [OpenX](http://www.openx.com/docs/openx_help_center/)'s [`showAdUnit()`](http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit) based on viewport size!
 
+Browse through the source code via the [`gh-pages` branch](https://github.com/registerguard/ads-on-demand/tree/gh-pages).
+
 ---
 
 #### DETAILS
