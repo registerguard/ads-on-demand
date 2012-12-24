@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>OMG! Responsive ads... On demand!</title>
+	<meta name="description" content="Using writeCapture() and onMediaQuery() to call OpenX's showAdUnit() based on viewport size!">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<link rel="stylesheet" href="css/demo.css">
+	
+	<!-- https://github.com/scottjehl/Respond/ -->
+	<!--[if (lt IE 9) & (!IEMobile)]>
+		<script src="js/respond.src.js"></script>
+	<![endif]-->
+	
+</head>
+<body>
+	
+	<div id="container">
+		
+		<h1>OMG! Responsive ads... On demand!</h1>
+		
+		<p>Complex example using <code><a href="https://github.com/iamnoah/writeCapture/tree/writeCapture2">writeCapture()</a></code> and <code><a href="https://github.com/registerguard/js-media-queries">onMediaQuery()</a></code> to call OpenX's <code><a href="http://www.openx.com/docs/openx_help_center/content/adtagguide_tagapi_instancemethods.html#adtagguide_tagapi_instance_showadunit">showAdUnit()</a></code> based on viewport size!</p>
+		
+		<hr>
+		
+		<section>
+			
+			<h1>Mobile</h1>
+			
+			<div class="alpha advert" id="mobile_billboard"></div>
+			
+			<div class="alpha advert" id="mobile_leaderboard"></div>
+			
+			<div class="alpha advert" id="mobile_medium_rectangle_1"></div>
+			
+			<div class="alpha advert" id="mobile_medium_rectangle_2"></div>
+			
+		</section>
+		
+		<hr>
+		
+		<section>
+			
+			<h1>Tablet</h1>
+			
+			<div class="bravo advert" id="tablet_billboard"></div>
+			
+			<div class="bravo advert" id="tablet_leaderboard"></div>
+			
+			<div class="bravo advert" id="tablet_medium_rectangle_1"></div>
+			
+			<div class="bravo advert" id="tablet_medium_rectangle_2"></div>
+			
+		</section>
+		
+		<hr>
+		
+		<section>
+			
+			<h1>Desktop &amp; Big Desktop</h1>
+			
+			<div class="charlie delta advert" id="desktop_billboard"></div>
+			
+			<div class="charlie delta advert" id="desktop_leaderboard"></div>
+			
+			<div class="charlie delta advert" id="desktop_medium_rectangle_1"></div>
+			
+			<div class="charlie delta advert" id="desktop_medium_rectangle_2"></div>
+			
+		</section>
+		
+		<hr>
+		
+		<p>Browser's tested:</p>
+		
+		<ul>
+			<li>
+				<b>MAC Mountain Lion:</b>
+				<ul>
+					<li>Firefox 15.0.1 - <span class="passed">Passed!</span></li>
+					<li>Safari 6.0 (8536.25) - <span class="passed">Passed!</span></li>
+					<li>Opera 12.02 - <span class="passed">Passed!</span></li>
+					<li>Chrome 21.0.1180.89 - <span class="passed">Passed!</span></li>
+				</ul>
+			</li>
+			<li>
+				<b>Windows 7:</b>
+				<ul>
+					<li>Firefox 15.0.1 - <span class="passed">Passed!</span></li>
+					<li>Safari 5.1.7 - <span class="passed">Passed!</span></li>
+					<li>Chrome 21.0.1180.89 m - <span class="passed">Passed!</span></li>
+					<li>IE 9.0.x - <span class="passed">Passed!</span></li>
+				</ul>
+			</li>
+			<li>
+				<b>PC Vista:</b>
+				<ul>
+					<li>
+						Firefox 3.6.1.8 - <span class="acceptable">Acceptable</span>
+						<br>
+						I see <a href="http://stackoverflow.com/questions/304471/firefox-sits-on-transferring-data-from-or-read">this Firefox bug</a>. I'd try to fix now if our current Firefox 3.x traffic accounted for a lot more than 0.69% of our monthly traffic.
+					</li>
+					
+					<li>Firefox 14.0.x - <span class="passed">Passed!</span></li>
+					
+					<li>Chrome 21.0.1180.89 m - <span class="passed">Passed!</span></li>
+					<li>Safari 5.1.7 (7534.57.2) - <span class="passed">Passed!</span></li>
+					<li>Opera 12.02 - <span class="passed">Passed!</span></li>
+					<li>IE 9.0.8112.16421 - <span class="passed">Passed!</span></li>
+					<li>
+						IE 8.0.6001.19222 - <span class="buggy">Buggy</span>
+						<br>
+						<code>Invalid argument. element.write.js, line 291 character 6</code>
+						<br>
+						Will create a siplified demo page and submit for review.
+					</li>
+					<li>
+						IE 7.0.6002.18005 - <span class="buggy">Buggy</span>
+						<br>
+						Broken images load. Some ads not loading.
+						<br>
+						Hoping the IE 8 bug above will fix this problem.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<b>PC XP:</b>
+				<ul>
+					<li>IE 6.0.x - <span class="tbd">TBD</span> I still need to test on my home computer.</li>
+				</ul>
+			</li>
+			<li>
+				<b>iPhone 4:</b>
+				<ul>
+					<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
+					<li>Safari 5.1.1 - <span class="passed">Passed!</span></li>
+					<li>Chrome 19.0.x - <span class="passed">Passed!</span></li>
+					<li>Opera Mini 7.0.x - <span class="passed">Passed!</span></li>
+				</ul>
+			</li>
+			<li>
+				<b>iPhone:</b>
+				<ul>
+					<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
+				</ul>
+			</li>
+			<li>
+				<b>iPad:</b>
+				<ul>
+					<li>Safari 4.3 (simulated) - <span class="passed">Passed!</span></li>
+					<li>Safari 5.1.1 - <span class="passed">Passed!</span></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<hr>
+		
+		<p><b>Stuff:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat, <a href="#">enim sit amet fermentum mollis</a>, nibh sapien lacinia ante, in condimentum nulla eros sit amet lacus. Sed tortor ipsum, sollicitudin sed imperdiet lacinia, tristique quis leo. Aenean congue, arcu in placerat feugiat, ligula nisi cursus urna, eget adipiscing eros est ac enim. Pellentesque <a href="#">dignissim</a>, ligula ut scelerisque faucibus, felis odio ornare diam, ut vestibulum velit nisi at lorem. Morbi eu ligula sem. Curabitur sit amet enim eu lectus lobortis fermentum. Proin id magna dolor, quis iaculis tortor. Vestibulum eu elit felis, nec elementum ipsum. Fusce sit amet leo non magna cursus dignissim. Sed rhoncus lorem quis mi <a href="#">tristique</a> et viverra arcu varius. In at libero ante. Duis nisl ligula, lobortis quis aliquam quis, semper id enim. <a href="#">Pellentesque</a> orci nibh, rhoncus in tempus ac, tempus in risus. Duis sit amet massa in nulla auctor pulvinar at ut urna. Mauris posuere ornare augue quis congue. Integer tristique, lacus sit amet mattis tristique, purus erat congue lacus, id <a href="#">ullamcorper est ante</a> non libero.</p>
+		
+		<hr>
+		
+		<ol id="debug"></ol>
+		
+	</div>
+	
+	<script src="http://ox-d.registerguard.com/w/1.0/jstag"></script>
+	<script src="js/element.write.js"></script>
+	<script src="js/writeCapture2.js"></script>
+	<script src="js/onmediaquery-0.1.1.js"></script>
+	<script src="js/demo.js"></script>
+	<script>
+		<!--
+			
+			var $ox = OX(),
+			alpha,
+			bravo,
+			charlie,
+			delta,
+			$mobile_billboard           = document.getElementById('mobile_billboard'),
+			$mobile_leaderboard         = document.getElementById('mobile_leaderboard'),
+			$mobile_medium_rectangle_1  = document.getElementById('mobile_medium_rectangle_1'),
+			$mobile_medium_rectangle_2  = document.getElementById('mobile_medium_rectangle_2'),
+			$tablet_billboard           = document.getElementById('tablet_billboard'),
+			$tablet_leaderboard         = document.getElementById('tablet_leaderboard'),
+			$tablet_medium_rectangle_1  = document.getElementById('tablet_medium_rectangle_1'),
+			$tablet_medium_rectangle_2  = document.getElementById('tablet_medium_rectangle_2'),
+			$desktop_billboard          = document.getElementById('desktop_billboard'),
+			$desktop_leaderboard        = document.getElementById('desktop_leaderboard'),
+			$desktop_medium_rectangle_1 = document.getElementById('desktop_medium_rectangle_1'),
+			$desktop_medium_rectangle_2 = document.getElementById('desktop_medium_rectangle_2'),
+			$units = {
+				$mobile : {
+					billboard          : 273975,
+					leaderboard        : 280964,
+					medium_rectangle_1 : 280966,
+					medium_rectangle_2 : 280968
+				},
+				$tablet : {
+					billboard          : 273976,
+					leaderboard        : 273977,
+					medium_rectangle_1 : 280965,
+					medium_rectangle_2 : 280967
+				},
+				$desktop : {
+					billboard          : 273993,
+					leaderboard        : 273978,
+					medium_rectangle_1 : 273979,
+					medium_rectangle_2 : 273980
+				}
+			},
+			$queries = [
+				
+				{
+					context  : 'alpha',
+					callback : function() {
+						
+						msg('alpha');
+						
+						if ( ! alpha) {
+							
+							writeCapture.write($mobile_billboard,          '<script>$ox.showAdUnit("' + $units.$mobile.billboard + '")<\/script>');
+							writeCapture.write($mobile_leaderboard,        '<script>$ox.showAdUnit("' + $units.$mobile.leaderboard + '")<\/script>');
+							writeCapture.write($mobile_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$mobile.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($mobile_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$mobile.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>mobile</i> document.writes are done!'); });
+							
+						}
+						
+						alpha = true;
+						
+					}
+				},
+				
+				{
+					context  : 'bravo',
+					callback : function() {
+						
+						msg('bravo');
+						
+						if ( ! bravo) {
+							
+							writeCapture.write($tablet_billboard,          '<script>$ox.showAdUnit("' + $units.$tablet.billboard + '")<\/script>');
+							writeCapture.write($tablet_leaderboard,        '<script>$ox.showAdUnit("' + $units.$tablet.leaderboard + '")<\/script>');
+							writeCapture.write($tablet_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$tablet.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($tablet_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$tablet.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>tablet</i> document.writes are done!'); });
+							
+						}
+						
+						bravo = true;
+						
+					}
+				},
+				
+				{
+					context  : ['charlie', 'delta'],
+					callback : function() {
+						
+						msg('charlie/delta');
+						
+						if (( ! charlie) || ( ! delta)) {
+							
+							writeCapture.write($desktop_billboard,          '<script>$ox.showAdUnit("' + $units.$desktop.billboard + '")<\/script>');
+							writeCapture.write($desktop_leaderboard,        '<script>$ox.showAdUnit("' + $units.$desktop.leaderboard + '")<\/script>');
+							writeCapture.write($desktop_medium_rectangle_1, '<script>$ox.showAdUnit("' + $units.$desktop.medium_rectangle_1 + '")<\/script>');
+							writeCapture.write($desktop_medium_rectangle_2, '<script>$ox.showAdUnit("' + $units.$desktop.medium_rectangle_2 + '")<\/script>');
+							writeCapture.write(function() { msg('All <i>desktop</i> document.writes are done!'); });
+							
+						}
+						
+						charlie = delta = true;
+						
+					}
+				}
+				
+			];
+			
+			window.onload = function() {
+				
+				$ox.addVariable('section', 'Sports');
+				$ox.addPage('13289'); // desktop
+				$ox.addPage('13291'); // tablet
+				$ox.addPage('13292'); // mobile
+				
+				writeCapture(document.getElementsByTagName('head')[0], function() { MQ.init($queries); }).write('<script>$ox.fetchAds()<\/script>').close();
+				
+			};
+			
+		//-->
+	</script>
+	
+</body>
+</html>

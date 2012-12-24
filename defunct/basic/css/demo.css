@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html { font-family: "small"; }
+body { font-family: Arial, sans-serif; } /* Override <html> inheritance. */
+
+body:after {
+	content: "small";
+	display: none;
+}
+
+#desktop { display: none; }
+
+@media only screen and (min-width: 900px) {
+	
+	html { font-family: "large"; }
+	body:after { content: "large"; }
+	
+	#skinny { display: none; }
+	#desktop { display: block; }
+	
+}
+
+/*--------------------------------------------------------------------*/
+
+.tbd, .passed, .acceptable, .buggy, .failed { font-weight: bold; text-transform: uppercase; }
+.passed { color: green; }
+.acceptable { color: blue; }
+.buggy { color: orange; }
+.failed { color: red; }
+.tbd { color: purple; }
