@@ -28,7 +28,7 @@ function make_iframe(auid, width, height) {
 window.onload = function() {
 	
 	// Used to count query media query matches:
-	flag = 1,
+	var flag = 1,
 	
 	// The `onmediaquery` setup:
 	queries = [
