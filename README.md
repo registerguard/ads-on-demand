@@ -20,7 +20,7 @@ Our initial thought was to use CSS `display:none` to show/hide ad positions… U
 
 ##### Doh!
  
-We use [OpenX](http://www.openx.com) "[Enterprise](http://openx.com/support/log-in)" to serve ads; after a few quick experiments, we quickly came to realize that OpenX, like most (all?) other ad serving software, isn't setup to serve ads, on demand, based on viewport size.
+We use [OpenX](http://www.openx.com) "[Enterprise](http://openx.com/support/log-in)" to serve ads; after a few small experiments, we quickly came to realize that OpenX, like most (all?) other ad serving software, isn't setup to serve ads, on demand, based on viewport size.
 
 ##### Huh?
 
@@ -36,11 +36,11 @@ This is The Register-Guard's solution to serving ads, on demand, based on viewpo
 
 ##### What's the trick?
 
-After many moons of research (see below) we ended up using `<iframe>`s to serve our ads.
+After many moons of research ([see below](https://github.com/registerguard/ads-on-demand#state-of-the-repo)) we ended up using `<iframe>`s to serve our ads.
 
 We even [built a Django app](https://github.com/registerguard/django-ad-manager) to help us serve our ads to our network of sites.
 
-In situations where we can't use `<iframe>`s, we put our CSS's show/hide within the ad creative itself! The advantage here is that the ad gets counted only once, though, the disadvantage is that we're loading twice the assets for any one viewport size/range.
+In situations where we can't use `<iframe>`s (e.g. a pushdown), we put our CSS's show/hide within the ad creative itself! The advantage here is that the ad gets counted only once! Though, the disadvantage is that we're loading twice the assets for any one viewport size/range.
 
 ---
 
@@ -50,7 +50,7 @@ Scan with phone and/or click to view the [latest demo](http://registerguard.gith
 
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/ads-on-demand&chs=240x240)](http://registerguard.github.com/ads-on-demand/master/)
 
-Browse through the source code via the [`gh-pages` branch](https://github.com/registerguard/ads-on-demand/tree/gh-pages/master/).
+Browse through the source code [here](https://github.com/registerguard/ads-on-demand/tree/gh-pages/master/).
 
 **Note:** At [The Register-Guard](http://www.registerguard.com), we use [OpenX Enterprise-level ad serving solutions for publishers](http://www.openx.com/publisher/enterprise-ad-server), so that's what the demo uses to serve the ads; fortunately, this repo's code, concepts and techniques should be easy to adapt to other ad serving software.
 
@@ -116,10 +116,6 @@ After the second OpenX change, we shelved the `<scrip>` tag approach and went ba
 * [`WriteCapture2`](https://github.com/iamnoah/writeCapture/tree/writeCapture2)
 * [`element.write`](https://github.com/iamnoah/element.write)
 * [`onMediaQuery`](https://github.com/JoshBarr/js-media-queries), and here's [my fork](https://github.com/registerguard/js-media-queries)
-
----
-
-More information coming soon!
 
 ---
 
