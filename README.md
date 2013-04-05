@@ -4,6 +4,18 @@
 
 ---
 
+#### 2013/04/05 UPDATE
+
+OpenX Enterprise has recently rolled out some new features to its API. One of these features, we hope, will give us the ability to load ads using `<script>` tags (vs. our current solution, which just uses `<iframe>`s).
+
+We're currently working on the new code and hope to have a simple demo page uploaded to this repo within the coming weeks.
+
+Another change we're planning on making is to replace the use of [OnMediaQuery](https://github.com/registerguard/js-media-queries) JS with [MatchMedia](https://github.com/paulirish/matchMedia.js/) JS.
+
+Stay tuned! :)
+
+---
+
 #### ABOUT
 
 At [The Register-Guard](http://www.registerguard.com), we're currently in the process of building a "[responsive](http://en.wikipedia.org/wiki/Responsive_Web_Design)" template for an upcoming redesign of our [site](http://www.registerguard.com).
