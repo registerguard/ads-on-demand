@@ -6,7 +6,13 @@
 
 #### 2013/04/05 UPDATE
 
-OpenX Enterprise has recently rolled out some new features to its API. One of these features, we hope, will give us the ability to load ads using `<script>` tags (vs. our current solution, which just uses `<iframe>`s).
+OpenX Enterprise has recently rolled out [some new features to its API](http://www.openx.com/docs/openx_help_center/content/adtagguide_asynchjs.html). One of these features, we hope, will give us the ability to load ads using `<script>` tags (vs. our current solution, which just uses `<iframe>`s).
+
+> #### Asynchronous JavaScript ad tags  
+> 
+> OpenX now supports asynchronous JavaScript ad tags for standalone, ad unit group, and multi-ad unit ad calls. Implementing these tags will decrease webpage load times; users won't have to wait for webpage content to load before ads display. Currently, you cannot generate these ad tags in the user interface; however, the documentation describes how to manually build them.
+
+&mdash; [OpenX Enterprise Release Notification](http://welcome.openx.com/index.php/email/emailWebview?mkt_tok=3RkMMJWWfF9wsRokuqXIZKXonjHpfsX84%2B0tWbHr08Yy0EZ5VunJEUWy2oIFTNQhcOuuEwcWGog8zxxdFPg%3D)
 
 We're currently working on the new code and hope to have a simple demo page uploaded to this repo within the coming weeks.
 
