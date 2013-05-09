@@ -22,6 +22,13 @@ Stay tuned! :)
 
 ---
 
+#### RELATED REPOS
+
+* [Django Ad Manager](https://github.com/registerguard/django-ad-manager): Django app to help manage, schedule and control OpenX ads from one server to another (this is what we actually use on our [live site](http://registerguard.com)).
+* [Benjamins](https://github.com/registerguard/benjamins): Coming soon! We're moving the [Django Ad Manager javascript plugin (and other static assets)](https://github.com/registerguard/django-ad-manager/tree/b91036bf59b052499b21409a7db65b876a436782/ad_manager/static/ad_manager/1.0) to their own repository.
+
+---
+
 #### ABOUT
 
 At [The Register-Guard](http://www.registerguard.com), we're currently in the process of building a "[responsive](http://en.wikipedia.org/wiki/Responsive_Web_Design)" template for an upcoming redesign of our [site](http://www.registerguard.com).
@@ -139,7 +146,7 @@ After the second OpenX change, we shelved the `<scrip>` tag approach and went ba
 
 #### LEGAL
 
-Copyright © 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://www.registerguard.com)
+Copyright &copy; 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://www.registerguard.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
