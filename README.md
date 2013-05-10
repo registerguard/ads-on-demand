@@ -40,7 +40,7 @@ Browse through the source code [here](https://github.com/registerguard/ads-on-de
 
 ##### Un-Responsive Delivery Method:
 Use the out-of-the box [ad unit group (AUG) tags](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs_struct_page.html) on each and every separate template (we have approx. 50-75).
-
+.    .    .    .    .    .    .    .    .    .    .    . 
 **In the Wild:**
 
 Provided the ability for 1 server ping per page to request all the ads on that page, but is a lot of inventory management and overhead.
@@ -49,7 +49,7 @@ Provided the ability for 1 server ping per page to request all the ads on that p
    
 ##### Responsive Delivery Method 1: *FAIL*
 Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` to show/hide ad positions… Unfortunately, while it might sound easy to impliment such a system, there are drawbacks:
-
+.    .    .    .    .    .    .    .    .    .    .    . 
 **In the Wild:**
 
 > From a functional perspective, your first instinct might be to use a simple display:none; in your stylesheet to hide bigger ads from showing up after a certain breakpoint. However, it’s not that easy.  
@@ -62,7 +62,7 @@ Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` 
    
 ##### Responsive Delivery Method 2: *FAIL*
 Just deliver the normal script ad tags with a `document.write` and all is right with the world&hellip; WRONG
-
+.    .    .    .    .    .    .    .    .    .    .    . 
 **In the Wild:**
 
 > It all boils down to Javascript's `document.write` command; unfortunately, if you call a script that uses this command (after the page has loaded) it will wipe out your page and only display the output of the write command.
@@ -76,7 +76,7 @@ Just deliver the normal script ad tags with a `document.write` and all is right 
    
 ##### Responsive Delivery Method 3: *FAIL* 
 Deliver every individual ad unit `<script>` tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts
-
+.    .    .    .    .    .    .    .    .    .    .    . 
 **In the Wild:**
 
 A few months of research can be found via the [**defunct**](https://github.com/registerguard/ads-on-demand/tree/defunct) branch.
@@ -105,7 +105,7 @@ Deliver every individual ad unit tag with [writeCapture2()](https://github.com/i
 We built a [Django app](https://github.com/registerguard/django-ad-manager) to help us serve our ads to our network of sites (via a wicked ah-some JSON call).
 
 In situations where we can't use `<iframe>`s (e.g. a pushdown), we put our CSS's show/hide within the ad creative itself! The advantage here is that the ad gets counted only once! Though, the disadvantage is that we're loading twice the assets for any one viewport size/range.
-
+.    .    .    .    .    .    .    .    .    .    .    . 
 **In the Wild:**
 
 After many moons of research ([see below](https://github.com/registerguard/ads-on-demand#state-of-the-repo)) we ended up using `<iframe>`s to serve our ads.
@@ -113,8 +113,8 @@ After many moons of research ([see below](https://github.com/registerguard/ads-o
 .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .
    
 ##### Responsive Delivery Method 5: *BETTER SUCCESS*
-* Deliver AUGs via OpenX's [asynchronous JS ad tags](http://www.openx.com/docs/openx_help_center/content/adtagguide_asynchjs.html) and kill the overhead of the [OnMediaQuery](https://github.com/registerguard/js-media-queries) JS and replace with [MatchMedia](https://github.com/paulirish/matchMedia.js/) JS.
-
+Deliver AUGs via OpenX's [asynchronous JS ad tags](http://www.openx.com/docs/openx_help_center/content/adtagguide_asynchjs.html) and kill the overhead of the [OnMediaQuery](https://github.com/registerguard/js-media-queries) JS and replace with [MatchMedia](https://github.com/paulirish/matchMedia.js/) JS.
+.    .    .    .    .    .    .    .    .    .    .    . 
 > OpenX now supports asynchronous JavaScript ad tags for standalone, ad unit group, and multi-ad unit ad calls. Implementing these tags will decrease webpage load times; users won't have to wait for webpage content to load before ads display. Currently, you cannot generate these ad tags in the user interface; however, the documentation describes how to manually build them.
 > &mdash; [OpenX Enterprise Release Notification](http://welcome.openx.com/index.php/email/emailWebview?mkt_tok=3RkMMJWWfF9wsRokuqXIZKXonjHpfsX84%2B0tWbHr08Yy0EZ5VunJEUWy2oIFTNQhcOuuEwcWGog8zxxdFPg%3D)
 
