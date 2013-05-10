@@ -57,6 +57,7 @@ Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` 
 >   
 > &mdash; [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
 
+- - -
 
 ##### Responsive Delivery Method 2: *FAIL*
 Just deliver the normal script ad tags with a `document.write` and all is right with the world&hellip; WRONG
