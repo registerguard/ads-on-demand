@@ -57,7 +57,7 @@ Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` 
 >   
 > &mdash; [Adaptive Web-Design & Advertising](http://blog.buysellads.com/2012/01/adaptive-web-design-advertising/)
 
-- - -
+
 
 ##### Responsive Delivery Method 2: *FAIL*
 Just deliver the normal script ad tags with a `document.write` and all is right with the world&hellip; WRONG
@@ -70,6 +70,7 @@ Just deliver the normal script ad tags with a `document.write` and all is right 
 >   
 > I don't blame OpenX. The problem is deeper than that&hellip; Long story short, the online advertising industry needs to stop using `document.write`!
 > &mdash; Micky Hulse
+
 
 
 ##### Responsive Delivery Method 3: *FAIL* 
@@ -96,6 +97,7 @@ It's hard to leverage a system that changes on a regular basis&hellip; The last 
 After the second OpenX change, we shelved the `<script>` tag approach and went back to the drawing board&hellip;
 
 
+
 ##### Responsive Delivery Method 4: *SUCCESS*
 Deliver every individual ad unit tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts, but in the form of an`<iframe>` (can be injected after page-load and won't destroy the page)
 
@@ -106,6 +108,7 @@ In situations where we can't use `<iframe>`s (e.g. a pushdown), we put our CSS's
 **In the Wild:**
 
 After many moons of research ([see below](https://github.com/registerguard/ads-on-demand#state-of-the-repo)) we ended up using `<iframe>`s to serve our ads.
+
 
 
 ##### Responsive Delivery Method 5: *BETTER SUCCESS*
