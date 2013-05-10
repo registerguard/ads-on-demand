@@ -39,15 +39,18 @@ Browse through the source code [here](https://github.com/registerguard/ads-on-de
 #### SOLUTIONS
 
 ##### Un-Responsive Delivery Method:
-* Use the out-of-the box [ad unit group (AUG) tags](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs_struct_page.html) on each and every separate template (we have approx. 50-75).
+Use the out-of-the box [ad unit group (AUG) tags](http://www.openx.com/docs/openx_help_center/content/adtagguide_synchjs_struct_page.html) on each and every separate template (we have approx. 50-75).
 
-*In the Wild:* Provided the ability for 1 server ping per page to request all the ads on that page, but is a lot of inventory management and overhead.
+**In the Wild:**
+
+Provided the ability for 1 server ping per page to request all the ads on that page, but is a lot of inventory management and overhead.
 
 
 ##### Responsive Delivery Method 1: *FAIL*
-* Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` to show/hide ad positions… Unfortunately, while it might sound easy to impliment such a system, there are drawbacks:
+Create 2 AUGs per template (desktop ads, mobile ads) and use CSS `display:none` to show/hide ad positions… Unfortunately, while it might sound easy to impliment such a system, there are drawbacks:
 
-*In the Wild:*
+**In the Wild:**
+
 > From a functional perspective, your first instinct might be to use a simple display:none; in your stylesheet to hide bigger ads from showing up after a certain breakpoint. However, it’s not that easy.  
 >   
 > What happens here is that the ad code is still being loaded, the impressions are counted for the advertiser, but their ad isn’t being shown. Using display:none to hide some ads would result in skewed numbers and would definitely affect the performance of ad campaigns. Display: none; isn’t a solution, it just creates more problems.  
@@ -56,9 +59,10 @@ Browse through the source code [here](https://github.com/registerguard/ads-on-de
 
 
 ##### Responsive Delivery Method 2: *FAIL*
-* Just deliver the normal script ad tags with a `document.write` and all is right with the world&hellip; WRONG
+Just deliver the normal script ad tags with a `document.write` and all is right with the world&hellip; WRONG
 
-*In the Wild:*
+**In the Wild:**
+
 > It all boils down to Javascript's `document.write` command; unfortunately, if you call a script that uses this command (after the page has loaded) it will wipe out your page and only display the output of the write command.
 >   
 > If you you're building a responsive website, and you want your ads to change based on viewport size, then trying to call ad tags that use the `document.write` command just doesn't work.
@@ -68,9 +72,10 @@ Browse through the source code [here](https://github.com/registerguard/ads-on-de
 
 
 ##### Responsive Delivery Method 3: *FAIL* 
-* Deliver every individual ad unit `<script>` tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts
+Deliver every individual ad unit `<script>` tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts
 
-*In the Wild:*
+**In the Wild:**
+
 A few months of research can be found via the [**defunct**](https://github.com/registerguard/ads-on-demand/tree/defunct) branch.
 
 The bulk of the code in that branch used OpenX's `<script>` tag implimentation to serve ads to our pages.
@@ -91,13 +96,14 @@ After the second OpenX change, we shelved the `<script>` tag approach and went b
 
 
 ##### Responsive Delivery Method 4: *SUCCESS*
-* Deliver every individual ad unit tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts, but in the form of an`<iframe>` (can be injected after page-load and won't destroy the page)
+Deliver every individual ad unit tag with [writeCapture2()](https://github.com/iamnoah/writeCapture/tree/writeCapture2) & [onMediaQuery()](https://github.com/JoshBarr/js-media-queries) scripts, but in the form of an`<iframe>` (can be injected after page-load and won't destroy the page)
 
 We built a [Django app](https://github.com/registerguard/django-ad-manager) to help us serve our ads to our network of sites (via a wicked ah-some JSON call).
 
 In situations where we can't use `<iframe>`s (e.g. a pushdown), we put our CSS's show/hide within the ad creative itself! The advantage here is that the ad gets counted only once! Though, the disadvantage is that we're loading twice the assets for any one viewport size/range.
 
-*In the Wild:*
+**In the Wild:**
+
 After many moons of research ([see below](https://github.com/registerguard/ads-on-demand#state-of-the-repo)) we ended up using `<iframe>`s to serve our ads.
 
 
@@ -165,7 +171,7 @@ With that said, if you have questions/concerns/comments/other, please feel free 
 
 #### LEGAL
 
-Copyright &copy; 2012 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://www.registerguard.com)
+Copyright &copy; 2013 [Micky Hulse](http://hulse.me), [Patrick Sullivan](http://psullivan6.com) / [The Register-Guard](http://www.registerguard.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
