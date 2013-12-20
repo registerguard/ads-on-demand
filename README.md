@@ -138,6 +138,8 @@ With that said, if you have questions/concerns/comments/other, please feel free 
 
 #### DEBUG TOOLS
 
+* [BrowserStack](http://www.browserstack.com/): Cross-browser online testing tool.
+* [modern.IE](http://www.modern.ie/en-us#tool): Developer resources.
 * [Virtual PC](http://www.microsoft.com/windows/virtual-pc/download.aspx)  
 **Note:** I'd suggest clicking the "Don't need XP Mode and want VPC only? Download Windows Virtual PC without Windows XP Mode." link... XP Mode sounds like a headache. Always disable automatic updates so that the current version of IE doesn't get upgraded automatically.
     * [IE tester images](http://www.microsoft.com/en-us/download/details.aspx?id=11575).
